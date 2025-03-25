@@ -35,4 +35,17 @@ class playerTournoiController extends Controller
             return response()->json(["message" => "Error", "error" => $e->getMessage()], 500);
         }
     }
+
+    public function deletePlayersTournoi($idTournoi)
+    {
+        try {
+            TournoiPlayer::where('tournoi_id', $idTournoi)
+                ->where('player_id', auth()->user()->id)
+                ->delete();
+    
+            return response()->json(["message" => "Player removed from tournament"], 200);
+        } catch (\Exception $e) {
+            return response()->json(["message" => "Error", "error" => $e->getMessage()], 500);
+        }
+    }
 }

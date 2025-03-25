@@ -8,7 +8,6 @@ class Tournoi extends Model
 {
     protected $fillable = [
         'tournoi_id',
-        'match_date',
         'rules',
         'nb_players',
         'image',
