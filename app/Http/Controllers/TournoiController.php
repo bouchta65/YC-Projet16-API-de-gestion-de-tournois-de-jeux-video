@@ -9,7 +9,6 @@ class TournoiController extends Controller
 {
     public function AddTournoi(Request $request){
         $validatorData = $request->validate([
-            'match_date' => 'required|date', 
             'rules' => 'required|string|max:255', 
             'nb_players' => 'required|integer|min:1', 
             'image' => 'nullable|image|max:2048', 
@@ -53,7 +52,6 @@ class TournoiController extends Controller
 
     public function update(request $request, $id){
         $validatorData = $request->validate([
-            'match_date' => 'date', 
             'rules' => 'string|max:255', 
             'nb_players' => 'integer|min:1', 
             'image' => 'nullable|image|max:2048', 
