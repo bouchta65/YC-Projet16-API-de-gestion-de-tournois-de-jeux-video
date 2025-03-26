@@ -3,9 +3,12 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Matche extends Model
 {
+    use HasFactory;
+
     protected $fillable = [
         'tournoi_id',
         'player_1_id',
