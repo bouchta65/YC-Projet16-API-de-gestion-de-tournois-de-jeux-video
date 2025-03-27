@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\Tournoi;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class TournoiFactory extends Factory
@@ -26,7 +27,7 @@ class TournoiFactory extends Factory
             'rules' => $this->faker->word,
             'nb_players' => $this->faker->numberBetween(2, 10),
             'image' => $this->faker->imageUrl(),
-            'creator_id' => \App\Models\User::factory(),
+            'creator_id' => User::factory(),
         ];
     }
 }
