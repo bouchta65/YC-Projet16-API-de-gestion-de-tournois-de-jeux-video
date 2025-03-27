@@ -89,9 +89,9 @@ class TournoiTest extends TestCase
     {
         $token = $this->createUserAndGetToken();
     
-        $tournoi = Tournoi::factory()->create([
+        $tournoi = Tournoi::factory()->create(([
             'creator_id' => User::first()->id,  
-        ]);
+        ]));
     
         $response = $this->json('DELETE', "/api/tournaments/{$tournoi->id}", [], [
             'Authorization' => "Bearer $token"

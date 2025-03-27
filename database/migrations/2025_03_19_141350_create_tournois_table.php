@@ -9,7 +9,9 @@ class CreateTournoisTable extends Migration
     {
         Schema::create('tournois', function (Blueprint $table) {
             $table->id();  
+            $table->foreignId('creator_id')->constrained('users')->onDelete('cascade');
             $table->timestamp('match_date')->nullable(); 
+            $table->text('name')->nullable();  
             $table->text('rules')->nullable();  
             $table->integer('nb_players')->default(0);  
             $table->string('image')->nullable();  
