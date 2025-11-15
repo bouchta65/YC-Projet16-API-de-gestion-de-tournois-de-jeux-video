@@ -80,5 +80,3 @@ Ce projet est une API RESTful développée avec Laravel, permettant la gestion d
 
 - Documentation détaillée des endpoints via **Postman** ou **Swagger**.
 - Fourniture d'exemples de requêtes et de réponses JSON pour faciliter l'intégration par des développeurs tiers.
-
-
